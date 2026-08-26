@@ -1,0 +1,28 @@
+[model]
+id = "mlx-community/gemma-4-e4b-it-4bit"
+
+[dataset]
+source = "file"
+path = "examples/data/instructions.jsonl"
+validation_ratio = 0.2
+test_ratio = 0.2
+
+[format]
+kind = "instruction"
+instruction_column = "instruction"
+input_column = "input"
+response_column = "response"
+system_prompt = "Follow the instruction and answer concisely."
+
+[training]
+epochs = 1
+max_seq_length = 512
+batch_size = 1
+
+[output]
+dir = "outputs"
+run_name = "instruction-example"
+
+[evaluation]
+split = "test"
+max_tokens = 64

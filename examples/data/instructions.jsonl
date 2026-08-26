@@ -1,0 +1,8 @@
+{"instruction":"Translate to Spanish","input":"Good morning","response":"Buenos días"}
+{"instruction":"Add the numbers","input":"2 and 3","response":"5"}
+{"instruction":"Name the capital of France","input":"","response":"Paris"}
+{"instruction":"Write the opposite","input":"hot","response":"cold"}
+{"instruction":"Return the uppercase word","input":"hello","response":"HELLO"}
+{"instruction":"Name a primary color","input":"","response":"red"}
+{"instruction":"Complete the sequence","input":"1, 2, 3","response":"4"}
+{"instruction":"Translate to English","input":"gracias","response":"thank you"}

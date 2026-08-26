@@ -1,0 +1,49 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mlx-tune-kit"
+version = "0.1.0"
+description = "Config-driven text fine-tuning with MLX-VLM on Apple Silicon"
+readme = "README.md"
+requires-python = ">=3.12,<3.15"
+dependencies = [
+  "datasets>=4.0,<6",
+  "mlx-vlm[train]==0.6.13",
+  "torch==2.13.0",
+  "torchvision==0.28.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "mypy>=1.17",
+  "pytest>=8.4",
+  "pytest-cov>=6.2",
+  "ruff>=0.12",
+]
+
+[project.scripts]
+mlx-tune = "mlx_tune_kit.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mlx_tune_kit"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = [".cache", ".venv", "dist", "outputs"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.12"
+files = ["src"]
+ignore_missing_imports = true
+check_untyped_defs = true
+warn_unused_ignores = true

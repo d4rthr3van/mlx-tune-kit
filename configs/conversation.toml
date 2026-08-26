@@ -1,0 +1,25 @@
+[model]
+id = "mlx-community/gemma-4-e4b-it-4bit"
+
+[dataset]
+source = "file"
+path = "examples/data/conversations.jsonl"
+validation_ratio = 0.2
+test_ratio = 0.2
+
+[format]
+kind = "messages"
+messages_column = "messages"
+
+[training]
+epochs = 1
+max_seq_length = 512
+batch_size = 1
+
+[output]
+dir = "outputs"
+run_name = "conversation-example"
+
+[evaluation]
+split = "test"
+max_tokens = 64

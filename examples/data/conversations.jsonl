@@ -1,0 +1,8 @@
+{"messages":[{"role":"user","content":"Say hello"},{"role":"assistant","content":"Hello!"}]}
+{"messages":[{"role":"system","content":"Be concise."},{"role":"user","content":"What is 2+2?"},{"role":"assistant","content":"4"}]}
+{"messages":[{"role":"user","content":"Name a mammal"},{"role":"assistant","content":"A dolphin."}]}
+{"messages":[{"role":"user","content":"Opposite of up?"},{"role":"assistant","content":"Down."}]}
+{"messages":[{"role":"user","content":"Translate hola"},{"role":"assistant","content":"Hello."}]}
+{"messages":[{"role":"user","content":"Name a weekday"},{"role":"assistant","content":"Monday."}]}
+{"messages":[{"role":"user","content":"What color is snow?"},{"role":"assistant","content":"White."}]}
+{"messages":[{"role":"user","content":"What comes after A?"},{"role":"assistant","content":"B."}]}

@@ -1,0 +1,32 @@
+[model]
+id = "mlx-community/gemma-4-e4b-it-4bit"
+
+[dataset]
+source = "file"
+path = "examples/data/sentiment.csv"
+validation_ratio = 0.2
+test_ratio = 0.2
+
+[format]
+kind = "classification"
+text_column = "text"
+label_column = "label"
+system_prompt = "Classify the sentiment. Reply with exactly POSITIVE or NEGATIVE."
+
+[format.label_map]
+positive = "POSITIVE"
+negative = "NEGATIVE"
+
+[training]
+epochs = 1
+max_seq_length = 256
+batch_size = 1
+
+[output]
+dir = "outputs"
+run_name = "classification-example"
+
+[evaluation]
+split = "test"
+max_tokens = 8
+compare_base = true
